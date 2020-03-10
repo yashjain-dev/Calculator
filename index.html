@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=yes">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	
+	<title>Calculator</title>
+	<!-- Bootstrap -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+		<div class="container-fluid">
+		<h1>Calculator</h1>
+			<div class="row">
+				
+				<div class="col-md-6 px-2 " >
+					<div class="box" id="result">
+						<div class="eleOfResult" id="history">
+							<p id="history-value"></p>
+						</div><!-- history -->
+						<div class="eleOfResult" id="output">
+							<p id="output-value"></p>
+						</div><!-- output -->
+						<button class="arrow btn btn-primary btn-lg btn-block" id="leftArrow">&#8592</button>
+						<button class="arrow btn btn-primary btn-lg btn-block" id="rightArrow">&#8594</button>
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-xs-4 px-2 ">
+					<div class="box" id="keyboard">
+						<div class="line">
+							<button class=" keyboard_button" id="clear" onclick="clearScreen()">C</button>
+							<button class=" keyboard_button" id="backspace" onclick="backSpace()">CE</button>
+							<button class=" keyboard_button" id="%" onclick="insertOperator('%')">%</button>
+							<button class=" keyboard_button" id="/" onclick="insertOperator('/')">&#247;</button>
+						</div>
+						<div class="line">
+							<button class=" keyboard_button" id="7" onclick="addToDisplay(7)">7</button>
+							<button class=" keyboard_button" id="8" onclick="addToDisplay(8)">8</button>
+							<button class=" keyboard_button" id="9" onclick="addToDisplay(9)">9</button>
+							<button class=" keyboard_button" id="*" onclick="insertOperator('*')">&times;</button>
+						</div>
+						<div class="line">
+							<button class=" keyboard_button" id="4" onclick="addToDisplay(4)">4</button>
+							<button class=" keyboard_button" id="5" onclick="addToDisplay(5)">5</button>
+							<button class=" keyboard_button" id="6" onclick="addToDisplay(6)">6</button>
+							<button class=" keyboard_button" id="-" onclick="insertOperator('-')">-</button>
+						</div>
+						<div class="line">
+							<button class=" keyboard_button" id="1" onclick="addToDisplay(1)">1</button>
+							<button class=" keyboard_button" id="2" onclick="addToDisplay(2)">2</button>
+							<button class=" keyboard_button" id="3" onclick="addToDisplay(3)">3</button>
+							<button class=" keyboard_button" id="+" onclick="insertOperator('+')">+</button>
+						</div>
+						<div class="line">
+							<button class=" keyboard_button" id="00" onclick="addToDisplay(00)">00</button>
+							<button class=" keyboard_button" id="0" onclick="addToDisplay(0)">0</button>
+							<button class=" keyboard_button" id="." onclick="addDecimal(.)">.</button>
+							<button class=" keyboard_button" id="=" onclick="displayResult()">=</button>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+		</div><!-- container-fluid -->
+		<script src="script.js"></script>
+</body>
+</html>
